@@ -1,0 +1,65 @@
+#!/usr/bin/env ruby
+
+require 'colorize'
+require 'text-table'
+require 'thread'
+
+require_relative '../lib/kitsune/core'
+
+module Kitsune
+
+
+  class Application < Kitsune::Scanner
+
+    attr_reader :options
+
+    def initialize
+      @options = CommandLine::Manager.new.options
+      super(@options)
+    end
+
+
+    def report(results)
+      report = Report::Manager.new(results, :format => @options["--format"])
+
+      if @options["--output"]
+        File.open(@options["--output"], "w") { |f| f.write report.format }
+      else
+        puts report.format
+      end
+    end
+
+  end
+end
+
+kitsune = Kitsune::Application.new
+
+
+$stdout.puts  "[*] Initializing Scanner".colorize(:blue).bold
+$stdout.print "[~]   Processing files (this may take some time)".colorize(:blue)
+
+thread = Thread.new { kitsune.run_scan }
+
+while thread.alive?
+  sleep 1
+  print "."
+end
+
+puts
+puts
+$stdout.puts "[*] Report".colorize(:blue).bold
+
+
+if kitsune.options["--format"]
+  kitsune.report(kitsune.results)
+else
+  kitsune.results.each do |res|
+    puts "[~]" + " PATH => #{res[:path]} MATCHES".colorize(:blue)
+    puts "[=]" + " -- WEBAPP => #{res[:webapp_name]}"
+    puts "[=]" + "    * version          ->   #{res[:webapp_version]}"
+    puts "[=]" + "    * probability      ->   #{res[:probability]}"
+    puts "[=]" + "    * matched count    ->   #{res[:matched_count]}"
+    puts "[=]" + "    * total count      ->   #{res[:total_count]}"
+    puts
+  end
+end

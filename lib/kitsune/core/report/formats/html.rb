@@ -1,6 +1,6 @@
 require 'erubis'
 
-html = Module.new do
+module HTML
   def self.format(input)
     template =
       File.expand_path("../assets/templates/reporting/to_html_report.ktp")

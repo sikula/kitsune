@@ -5,6 +5,8 @@ require 'text-table'
 require 'thread'
 
 require_relative '../lib/kitsune/core'
+require_relative '../lib/kitsune/cli/manager'
+require_relative '../lib/kitsune/report/manager'
 
 module Kitsune
 

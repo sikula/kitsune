@@ -1,5 +1,5 @@
 require 'colorize'
-require_relative '../../../exception/manager'
+require_relative '../../../../exception/manager'
 
 module Threshold
   class Manager

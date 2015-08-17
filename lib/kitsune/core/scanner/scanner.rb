@@ -2,9 +2,9 @@
 require 'find'
 require 'pathname'
 
-require_relative '../exception/manager'
-require_relative '../checksum/manager'
-require_relative '../report/manager'
+require_relative '../../exception/manager'
+require_relative '../../checksum/manager'
+require_relative '../../report/manager'
 require_relative './matcher'
 
 

@@ -4,7 +4,7 @@ require 'colorize'
 require 'text-table'
 require 'thread'
 
-require_relative "../lib/kitsune"
+require 'kitsune'
 
 module Kitsune
 

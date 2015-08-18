@@ -1,4 +1,5 @@
 
-require_relative "kitsune/core"
-require_relative "kitsune/cli/manager"
-require_relative "kitsune/report/manager"
+
+require 'kitsune/core'
+require 'kitsune/cli/manager'
+require 'kitsune/report/manager'

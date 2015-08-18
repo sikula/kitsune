@@ -1,4 +1,4 @@
-require_relative '../../../database/manager'
+require 'kitsune/database/manager'
 require_relative './threshold/manager'
 
 

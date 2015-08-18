@@ -1,6 +1,6 @@
 require 'sequel'
 
-require_relative '../exception/manager'
+require 'kitsune/exception/manager'
 
 module Database
   class Manager

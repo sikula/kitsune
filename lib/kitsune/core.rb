@@ -1,5 +1,5 @@
 
-require_relative "core/scanner/scanner"
+require 'kitsune/core/scanner/scanner'
 
 module Kitsune
   module Core

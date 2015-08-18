@@ -1,7 +1,6 @@
 require 'csv'
 
 
-
 module ::CSV
   def self.format(input)
     CSV.generate do |csv|

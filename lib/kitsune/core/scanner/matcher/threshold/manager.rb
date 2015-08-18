@@ -4,7 +4,7 @@ require 'kitsune/exception/manager'
 module Threshold
   class Manager
 
-    include Exceptions::Manager
+    include Exceptions
 
 
     attr_reader :threshold

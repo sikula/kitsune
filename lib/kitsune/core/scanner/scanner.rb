@@ -12,7 +12,7 @@ require_relative './matcher'
 module Kitsune
   class Scanner
 
-    include Exceptions::Manager
+    include Exceptions
 
 
     attr_reader :results
@@ -47,7 +47,7 @@ module Kitsune
     def collect_checksums
       checksums = {}
       collect_files(*@options["--path"]) do |file|
-        checksums[file] = Checksum::Manager.checksum_file(file)
+        checksums[file] = Checksum.checksum_file(file)
       end
       return checksums
     end

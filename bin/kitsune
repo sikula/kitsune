@@ -35,6 +35,10 @@ end
 kitsune = Kitsune::Application.new
 
 
+File.readlines("lib/kitsune/banner").each do |line|
+  puts line
+end
+
 $stdout.puts  "[*] Initializing Scanner".colorize(:blue).bold
 $stdout.print "[~]   Processing files (this may take some time)".colorize(:blue)
 

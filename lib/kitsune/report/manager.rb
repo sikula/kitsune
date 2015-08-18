@@ -8,7 +8,7 @@ require 'kitsune/exception/manager'
 module Report
   class Manager
 
-    include Exceptions::Manager
+    include Exceptions
 
 
     def initialize(results, options = {})

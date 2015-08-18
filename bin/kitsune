@@ -4,9 +4,7 @@ require 'colorize'
 require 'text-table'
 require 'thread'
 
-require_relative '../lib/kitsune/core'
-require_relative '../lib/kitsune/cli/manager'
-require_relative '../lib/kitsune/report/manager'
+require_relative "../lib/kitsune"
 
 module Kitsune
 

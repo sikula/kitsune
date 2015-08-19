@@ -20,8 +20,7 @@ module Kitsune
 
 
     def report(results)
-      report = Report::Manager.new(results, :format => @options["--format"])
-
+      report = Kitsune::Report.new(results, :format => @options["--format"])
       if @options["--output"]
         File.open(@options["--output"], "w") { |f| f.write report.format }
       else

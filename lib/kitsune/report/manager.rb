@@ -5,8 +5,8 @@ require 'json'
 require 'kitsune/exception/manager'
 
 
-module Report
-  class Manager
+module Kitsune
+  class Report
 
     include Exceptions
 
@@ -17,7 +17,15 @@ module Report
     end
 
 
-    # Calls the "format" method from the class associated with the format
+    # Public: Calles the "format" method from a format class.
+    #
+    #
+    # Examples
+    #
+    #   report = Kitsune::Report.new({}, :format => :json)
+    #   report.format
+    #   # =>  {}
+    #
     def format
       format, path = _retrieve_format.to_a.flatten
       assert(InvalidFormatError) { format.eql?(@options[:format]) }
@@ -34,21 +42,23 @@ module Report
 
     # Creates a hash containing the format name (file_name without extension)
     # and path to the class associated with that format
-    def _construct_format_hash(paths)
+
+    # Private: Collects the format name and path of format file and stores it
+    #          in a hash.
+    #
+    #
+    # Examples
+    #
+    #   format, path = _retrieve_format.to_a.flatten
+    #   # => ["csv", "/formats/json.rb"]
+    #
+    def _retrieve_format
+      paths = Dir[__dir__ + "/formats/*.rb"]
       paths.each_with_object({}) do |file, hash|
         format = file.split("/").last.split(".").first
         hash[format] = file if format.eql?(@options[:format])
       end
     end
-
-
-    # Gets the format name and path of the format class
-    # (e.g  --format=json )
-    #   => { "json" => "./formats/json.rb" }
-    def _retrieve_format
-      _construct_format_hash(Dir[__dir__ + "/formats/*.rb"])
-    end
-
 
   end
 end

@@ -13,7 +13,7 @@ module Match
     def initialize(database: database, threshold: threshold, options: {})
       @options = options
       @threshold = Threshold::Manager.new(threshold)
-      @database = Database::Manager.new(database)
+      @database = Kitsune::Database.new(database)
     end
 
 

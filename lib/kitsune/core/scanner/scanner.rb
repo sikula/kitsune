@@ -47,7 +47,7 @@ module Kitsune
     def collect_checksums
       checksums = {}
       collect_files(*@options["--path"]) do |file|
-        checksums[file] = Checksum.checksum_file(file)
+        checksums[file] = Kitsune::Checksum.checksum_file(file)
       end
       return checksums
     end

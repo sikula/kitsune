@@ -1,7 +1,7 @@
 require 'text-table'
 
 
-module Table
+table = Module.new do
   def self.format(input)
     _table = Text::Table.new
     _table.head =

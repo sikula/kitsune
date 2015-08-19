@@ -40,6 +40,7 @@ module Exceptions
   #
   #   Exceptions::Manager.abort_with_info("Something Broke")
   #   # => "[!] Something Broke"
+  #
   def abort_with_info(message)
     abort "[!]".colorize(:red) + " #{message}"
   end

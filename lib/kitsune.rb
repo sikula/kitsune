@@ -1,4 +1,4 @@
 
 require 'kitsune/core'
-require 'kitsune/cli/manager'
-require 'kitsune/report/manager'
+require 'kitsune/cli/cli'
+require 'kitsune/report/report'

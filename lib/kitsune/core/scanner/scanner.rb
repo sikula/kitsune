@@ -2,9 +2,9 @@
 require 'find'
 require 'pathname'
 
-require 'kitsune/exception/manager'
-require 'kitsune/checksum/manager'
-require 'kitsune/report/manager'
+require 'kitsune/exception/exception'
+require 'kitsune/checksum/checksum'
+require 'kitsune/report/report'
 
 require_relative './matcher'
 

@@ -1,6 +1,6 @@
 require 'sequel'
 
-require 'kitsune/exception/manager'
+require 'kitsune/exception/exception'
 
 module Kitsune
   class Database

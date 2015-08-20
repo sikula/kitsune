@@ -2,7 +2,7 @@
 require 'find'
 require 'json'
 
-require 'kitsune/exception/manager'
+require 'kitsune/exception/exception'
 
 
 module Kitsune

@@ -5,14 +5,19 @@ INSTALLATION
 ===
 
 **Stable Release (Ruby Gem)**
+
   coming soon
 
 **From Source**
 
   git clone https://github.com/sikula/kitsune.git
+
   cd kitsune
+
   gem build kitsune.gemspec
+
   gem install kitsune-*.gem
+
 
 USAGE
 ===

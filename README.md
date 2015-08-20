@@ -1,23 +1,23 @@
 # kitsune
-An Application Fingerprinting Tool
+**kitsune** is a nonintrusive application fingerprinting tool which detects deployed applications installed on a system without having prior knoweledge of the location of deployed applications on a system.
 
+INSTALLATION
+===
 
-## Installation
-``` ruby
+**Stable Release (Ruby Gem)**
+  coming soon
+
+**From Source**
+
   git clone https://github.com/sikula/kitsune.git
-```
-
-``` ruby
+  cd kitsune
   gem build kitsune.gemspec
-```
+  gem install kitsune-*.gem
 
-``` ruby
-  gem install kitsune-1.0.1.gem
-```
+USAGE
+===
 
-## Usage
-``` bash
   kitsune --help
-```
+
 
 Note: Adding database files soon

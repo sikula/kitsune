@@ -10,19 +10,19 @@ INSTALLATION
 
 **From Source**
 
+```
   git clone https://github.com/sikula/kitsune.git
-
   cd kitsune
-
   gem build kitsune.gemspec
-
   gem install kitsune-*.gem
-
+```
 
 USAGE
 ===
 
+```
   kitsune --help
+```
 
 
 Note: Adding database files soon

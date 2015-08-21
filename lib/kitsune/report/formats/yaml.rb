@@ -1,3 +1,10 @@
+=begin
+
+  KITSUNE
+
+  Author  : Peter Vicherek
+=end
+
 require 'yaml'
 
 

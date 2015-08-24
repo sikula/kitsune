@@ -1,5 +1,5 @@
-require 'kitsune/database/manager'
-require_relative './threshold/manager'
+require 'kitsune/database/database'
+require_relative './threshold/threshold'
 
 
 

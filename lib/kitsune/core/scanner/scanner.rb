@@ -6,7 +6,7 @@ require 'kitsune/exception/exception'
 require 'kitsune/checksum/checksum'
 require 'kitsune/report/report'
 
-require_relative './matcher'
+require_relative './matcher/matcher'
 
 
 module Kitsune
@@ -54,7 +54,6 @@ module Kitsune
 
 
     #=> Helper Functions <=
-
     def collect_files(directory)
       Find.find(directory).each do |entry|
         next unless File.file?(entry)
@@ -63,12 +62,6 @@ module Kitsune
 
     rescue PermissionDeniedError => e
       abort_with_info(e.message)
-    end
-
-
-    def shortest_common_prefix(dirs, separator = "/")
-      dir1, dir2 = dirs.minmax.map { |d| d.split(separator) }
-      dir1.zip(dir2).take_while { |d1, d2| d1 == d2 }.map(&:first).join(separator)
     end
 
 

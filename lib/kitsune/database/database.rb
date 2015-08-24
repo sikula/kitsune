@@ -25,7 +25,7 @@ module Kitsune
     #   # => "/db/webapps.db"
     #
     def default_database
-      File.expand_path("../../../../../app/webapps.sqlite", __FILE__)
+      File.expand_path("../../../../../db/webapps.sqlite", __FILE__)
     end
 
 

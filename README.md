@@ -27,8 +27,27 @@ mv webapps.sqlite /kitsune/db
 
 ## Usage
 
+**Basic Usage**
 ```
   kitsune --help
+```
+
+**Simple Scan**
+```
+  kitsune --path /var/www/html/
+```
+
+**Running With Custom Database**
+```
+  kitsune --path /var/www/html/ --database /path/to/custom/database
+```
+
+**Filtering**
+```
+  kitsune --path /var/www/html/ --webapp "joomla"
+  kitsune --path /var/www/html/ --app-version "3.3.6"
+  kitsune --path /var/www/html/ --webapp "joomla" --app-version "3.3.6"
+  kitsune --path /var/www/html/ --webapp "wordpress" --probability 0.8
 ```
 
 

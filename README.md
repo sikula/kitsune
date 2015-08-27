@@ -17,6 +17,7 @@
 ```
 
 **Database**
+
 You can download the database file from [here](https://www.dropbox.com/s/dtj91gpxgexnctc/webapps.sqlite?dl=0)
 
 Then move webapps.sqlite to the 'db' directory in the kitsune folder
